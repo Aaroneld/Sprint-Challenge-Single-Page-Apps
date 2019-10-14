@@ -29,6 +29,8 @@ export default function Heading() {
       <MainDiv>
         <Link className="link" to="/">Home</Link>
         <Link className="link" to="/character-list">Characters</Link>
+        <Link className="link" to="/location-list">Locations</Link>
+        <Link className="link" to="/episode-list">Episodes</Link>
       </MainDiv>   
       <PageTitle>Rick &amp; Morty Fan Page</PageTitle>
     </Header>
