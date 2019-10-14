@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import LocationCard from './LocationCard';
+import EpisodeCard from './EpisodeCard';
 import styled from "styled-components";
 import Axios from 'axios';
 
@@ -12,7 +12,7 @@ const MainDiv = styled.div`
 export default function LocationsList() {
 
     
-  const [locations, setLocations] = useState(false);
+  const [episodes, setEpisodes] = useState(false);
 
   
   
@@ -23,9 +23,9 @@ export default function LocationsList() {
 
     const getInfo = () => {
         Axios
-        .get(" https://rickandmortyapi.com/api/location/")
+        .get("https://rickandmortyapi.com/api/episode/")
         .then(response => {
-          setLocations(response.data.results);
+          setEpisodes(response.data.results);
           console.log(response.data);
         })
         .catch(err => { 
@@ -34,15 +34,15 @@ export default function LocationsList() {
     }
 
     getInfo();
-    console.log(locations)
+    console.log(episodes)
 
   }, []);
 
     return(
         <MainDiv>
-            {console.log(locations)}
-            {locations.length > 0 && locations.map(location => (
-                <LocationCard key={location.id} location={location} />
+            {console.log(episodes)}
+            {episodes.length > 0 && episodes.map(episode => (
+                <EpisodeCard key={episode.id} episode={episode} />
             ))}
         </MainDiv>
     );

@@ -15,7 +15,7 @@ const Name = styled.h2`
 
 `;
 
-const Dimension = styled.h2`
+const Episode = styled.h2`
 
 `;
 
@@ -25,8 +25,8 @@ export default function LocationCard(props) {
   return (
 
     <MainDiv>
-      <Name>{props.location.name}</Name>
-      <Dimension>{props.location.dimension}</Dimension>
+      <Name>{props.episode.name}</Name>
+      <Episode>{props.episode.episode}</Episode>
     </MainDiv>
 
   );
